@@ -1,13 +1,15 @@
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 
 export const TradingSelector = () => {
+
     return (
         <>
             <div className="flex w-full h-full">
-                <Button variant="default" borderRadius="left" selected={true}>Perps</Button>
-                <Button variant="default" borderRadius="square" selected={false}>Lend</Button>
-                <Button variant="default" borderRadius="right"  selected={false}>Vaults</Button>
+                <Button variant="market" action="select" borderRadius="left">Perps</Button>
+                <Button variant="market" borderRadius="square">Lend</Button>
+                <Button variant="market" borderRadius="right">Vaults</Button>
             </div>
         </>
     )

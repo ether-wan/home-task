@@ -31,8 +31,7 @@ export const OPYNConnectButton = () => {
                   <Button
                     onClick={openConnectModal}
                     type="button"
-                    variant="default"
-                    selected={false}
+                    variant="connect"
                     borderRadius="rounded"
                   >
                     Connect Wallet
@@ -45,8 +44,7 @@ export const OPYNConnectButton = () => {
                   <Button
                     onClick={openChainModal}
                     type="button"
-                    variant="default"
-                    selected={false}
+                    variant="connect"
                     borderRadius="rounded"
                   >
                     Wrong network
@@ -59,10 +57,9 @@ export const OPYNConnectButton = () => {
                   <Button
                     onClick={openAccountModal}
                     type="button"
-                    variant="default"
-                    selected={true}
                     borderRadius="rounded"
-                    size="medium"
+                    variant="connect"
+
                   >
                     {account.displayName}
                   </Button>

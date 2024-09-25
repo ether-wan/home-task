@@ -13,11 +13,11 @@ export const MarketSelector = () => {
         <>
             <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                    <Button variant="default" borderRadius="soft" selected={true}>{selectedPair.name} {<ChevronDown />}</Button>
+                    <Button variant="default" borderRadius="soft" action="select">{selectedPair.name} </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                     {mockPairs.map((pair, i) => (
-                        <Button variant="default" borderRadius="soft" selected={true} key={i}>{pair.name}</Button>
+                        <Button variant="default" borderRadius="soft" action="select" key={i}>{pair.name}</Button>
                     ))}
                 </DropdownMenuContent>
             </DropdownMenu>

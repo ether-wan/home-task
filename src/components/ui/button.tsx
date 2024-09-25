@@ -9,49 +9,36 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-[#27292B]",
-        destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
+        default: "bg-[#27292B] h-full w-full text-[#686D73] border-2 border-transparent",
+        connect: "bg-[#27292B] text-white w-40",
+        trading: "bg-[#27292B] h-full w-full text-[#686D73] border-2 border-[#686D73]",
+        market: "bg-[#1B1C1D] h-full w-full text-[#686D73] border-2 border-transparent",
       },
       size: {
-        default: "h-full w-full",
-        medium: "h-10 px-10",
+        medium: "px-3 py-2",
       },
-      borderRadius: {      
-        square: "",  
-        soft: "rounded-md",
-        left: "rounded-l-md",
-        right: "rounded-r-md",
+      borderRadius: {
+        square: "",
+        soft: "rounded-lg",
+        left: "rounded-l-lg",
+        right: "rounded-r-lg",
         rounded: "rounded-full",
       },
-      selected: {
-        true: "",
-        false: "",
-      }
+      action: {
+        none: "",
+        long: "bg-[#06EA1D1F] text-[#29E03B] border-2 border-[#29E03B]",
+        short: "bg-[#3E0F04] text-[#FA5C38] border-2 border-[#FA5C38]",
+        select: "bg-[#3D4043] text-white",
+      },
     },
     compoundVariants: [
-      {
-        variant: "default",
-        selected: true,
-        className: "bg-[#27292B]",
-      },
-      {
-        variant: "default",
-        selected: false,
-        className: "bg-[#1B1C1D]",
-      },
+
     ],
     defaultVariants: {
       variant: "default",
-      selected: false,
-      size: "default",
-      borderRadius: "soft"
+      size: "medium",
+      borderRadius: "soft",
+      action: "none"
     },
   }
 )
@@ -63,11 +50,11 @@ export interface ButtonProps
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, selected, borderRadius, size, asChild = false, ...props }, ref) => {
+  ({ className, variant, borderRadius, size, action, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
     return (
       <Comp
-        className={cn(buttonVariants({ variant, borderRadius, selected, size, className }))}
+        className={cn(buttonVariants({ variant, borderRadius, action, size, className }))}
         ref={ref}
         {...props}
       />
