@@ -9,10 +9,11 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-[#27292B] h-full w-full text-[#686D73] border-2 border-transparent",
-        connect: "bg-[#27292B] text-white w-40",
-        trading: "bg-[#27292B] h-full w-full text-[#686D73] border-2 border-[#686D73]",
-        market: "bg-[#1B1C1D] h-full w-full text-[#686D73] border-2 border-transparent",
+        default: "bg-[#27292B] h-full w-full text-[#686D73] border-2 border-transparent text-base",
+        connect: "bg-[#27292B] text-white w-40 text-base",
+        trading: "bg-[#27292B] h-full w-full text-[#686D73] border-2 border-[#686D73] text-base",
+        market: "bg-[#1B1C1D] h-full w-full text-[#686D73] border-2 border-transparent text-xl",
+        dropdown : "bg-[#3D4043] h-full w-full text-[#686D73] border-2 border-transparent text-xl flex justify-between",
       },
       size: {
         medium: "px-3 py-2",

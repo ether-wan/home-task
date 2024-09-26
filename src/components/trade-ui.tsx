@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
-import { TrendingUp, TrendingDown, Settings } from "lucide-react"
+import { TrendingUp, TrendingDown } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Slider } from "@/components/ui/slider"
+import settingsIcon from "@/assets/icons/settings.png"
+import Image from "next/image"
 
 export const TradeUi = () => {
 
@@ -27,19 +29,19 @@ export const TradeUi = () => {
             </div>
 
             <div className="flex mt-3 bg-[#27292B] rounded-md">
-                <Button variant="default">Perps</Button>
-                <Button variant="default" action="select">Lend</Button>
-                <Button variant="default" >Vaults</Button>
+                <Button variant="default">0.5 Perp</Button>
+                <Button variant="default" action="select">1 Perp</Button>
+                <Button variant="default" >2 Perps</Button>
             </div>
 
             <div>
-                <h5 className="text-center mt-2 text-[#A1A5AA] decoration-solid decoration-[#A1A5AA] underline">Compare perps</h5>
+                <h5 className="text-center text-sm mt-2 text-[#A1A5AA] decoration-solid decoration-[#A1A5AA] underline">Compare perps</h5>
                 <hr className="mt-3 border-[#27292B]" />
             </div>
 
-            <div className="flex justify-between mt-4">
+            <div className="flex justify-between mt-4 items-center">
                 <p className="text-white">Long <span className="text-[#A1A5AA]">$4,9876</span></p>
-                <Settings className="text-[#A1A5AA] " />
+                <Image src={settingsIcon} alt="settings" className="hover:cursor-pointer" style={{width : "16px", height : "16px"}}/>
             </div>
 
             <div className="mt-3">

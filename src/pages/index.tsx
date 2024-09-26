@@ -47,7 +47,7 @@ const Home: NextPage = () => {
 
             </div>
 
-            <div className="bg-[#1B1C1D] h-40 rounded-md">
+            <div className="bg-[#1B1C1D] h-56 rounded-md">
 
             </div>
 

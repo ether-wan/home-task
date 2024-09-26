@@ -19,8 +19,8 @@ import { ChartLine, Shrink } from 'lucide-react'
 
 const navigation = [
     { icon: ChartLine, name: 'Trade', href: '#', current: true },
-    { icon: Shrink, name: 'Market', href: '#', current: false },
-    { icon: ChartLine, name: 'Vault', href: '#', current: false },
+    { icon: Shrink, name: 'Markets', href: '#', current: false },
+    { icon: ChartLine, name: 'Vaults', href: '#', current: false },
     { icon: Shrink, name: 'Portfolio', href: '#', current: false }
 ]
 
@@ -49,10 +49,10 @@ export const Navbar = () => {
                         </DisclosureButton>
                     </div>
                     <div className="sm:flex hidden flex-1 items-center sm:items-stretch justify-start">
-                        <div className="sm:ml-6 sm:flex items-center">
+                        <div className="sm:ml-6 sm:flex items-cente">
                             <NavigationMenu>
                                 <NavigationMenuList>
-                                    <div className="flex space-x-4">
+                                    <div className="flex space-x-1">
                                         {navigation.map((item, i) => (
                                             <NavigationMenuItem key={i}>
                                                 <Link href={item.href} legacyBehavior passHref>

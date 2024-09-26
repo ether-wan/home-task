@@ -1,10 +1,13 @@
 import { zeroAddress } from "viem";
+import icon1 from "../assets/icons/icon-1.png"
+import { StaticImageData } from "next/image";
+
 
 interface Pair {
   id: number;
   name: string;
   address: string;
-  imageUrl: string;
+  icon: StaticImageData | string;
 }
 
 export const mockPairs : Array<Pair> = [
@@ -12,12 +15,12 @@ export const mockPairs : Array<Pair> = [
       id: 1,
       name: 'ETH-USDC',
       address: zeroAddress,
-      imageUrl: 'https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880g',
+      icon: icon1,
     },
     {
       id : 2,
-      name: 'WBTC-USDC',
+      name: 'BTC-USDC',
       address: zeroAddress,
-      imageUrl: 'https://assets.coingecko.com/coins/images/26115/thumb/btcb.png?1655921693',
+      icon: 'https://assets.coingecko.com/coins/images/26115/thumb/btcb.png?1655921693',
     }
   ];

@@ -41,7 +41,7 @@ NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName
 const NavigationMenuItem = NavigationMenuPrimitive.Item
 
 const navigationMenuTriggerStyle = cva(
-  "group inline-flex w-max items-center justify-center px-6 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50",
+  "group inline-flex w-max items-center text-base justify-center px-6 py-2 font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       selected: {

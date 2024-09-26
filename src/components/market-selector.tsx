@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { mockPairs } from "@/mock/pair"
 import { useState } from "react"
 import { ChevronDown } from "lucide-react" 
+import Image from "next/image";
 
 
 export const MarketSelector = () => {
@@ -13,11 +14,18 @@ export const MarketSelector = () => {
         <>
             <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                    <Button variant="default" borderRadius="soft" action="select">{selectedPair.name} </Button>
+                    <Button variant="dropdown" borderRadius="soft" action="select">
+                        <Image src={selectedPair.icon} alt={selectedPair.name} width={52} />
+                        {selectedPair.name} 
+                        <ChevronDown/>
+                    </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                     {mockPairs.map((pair, i) => (
-                        <Button variant="default" borderRadius="soft" action="select" key={i}>{pair.name}</Button>
+                        <Button variant="dropdown" borderRadius="soft" action="select" key={i}>
+                            <Image src={selectedPair.icon} alt={selectedPair.name} width={52} />
+                            <span className="text-xl">{pair.name}</span>
+                        </Button>
                     ))}
                 </DropdownMenuContent>
             </DropdownMenu>
